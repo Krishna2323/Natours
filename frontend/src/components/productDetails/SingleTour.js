@@ -9,7 +9,7 @@ import "./SingleTour.scss";
 // import TourBooking from "./TourBooking/TourBooking";
 import TourDetail from "./TourDetail/TourDetail.js";
 import TourGallery from "./TourGallery/TourGallery";
-import TourMap from "./TourMap/TourMap";
+// import TourMap from "./TourMap/TourMap";
 import TourReview from "./TourReview/TourReview";
 
 const TourDetails = () => {
@@ -37,7 +37,7 @@ const TourDetails = () => {
           <ProductDetailHeader />
           <TourDetail />
           <TourGallery />
-          <TourMap product={product} />
+          {/* <TourMap product={product} /> */}
           <TourReview />
           {/* <TourBooking productId={product.id} /> */}
         </Fragment>
