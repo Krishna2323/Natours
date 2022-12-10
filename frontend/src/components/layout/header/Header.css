@@ -1,0 +1,32 @@
+.header {
+  grid-column: full-start/full-end;
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.text {
+  background-color: white;
+  padding: 7rem 8rem;
+  font-size: 7rem;
+  font-weight: 500;
+}
+
+.text1 {
+  grid-column: 1 / -2;
+  background-color: blanchedalmond;
+  padding: 7rem 8rem;
+
+  font-size: 5rem;
+  font-weight: 500;
+  justify-self: center;
+}
+
+@media (max-width: 600px) {
+  .text1 {
+    grid-column: 1/-1;
+    padding: 3rem 4rem;
+  }
+}

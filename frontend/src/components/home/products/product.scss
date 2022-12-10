@@ -1,0 +1,44 @@
+.section-product {
+  grid-column: 1/-1;
+  text-align: center;
+  background-color: white;
+  padding: 20rem 0 15rem 0;
+  margin-top: -19rem;
+
+  & .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 33rem));
+    margin-top: 7rem;
+    padding: 5rem 10rem;
+    justify-content: center;
+    row-gap: 8rem;
+    column-gap: 10rem;
+  }
+
+  ////////////Media Query
+
+  @media (max-width: 75em) {
+    & .products {
+      padding: 4rem;
+      row-gap: 3.2rem;
+      column-gap: 3.2rem;
+    }
+  }
+
+  @media (max-width: 56.25em) {
+    & .products {
+      padding: 5rem;
+      row-gap: 4rem;
+      column-gap: 8rem;
+    }
+  }
+
+  ////////////////////////
+  @media (max-width: 37.25em) {
+    & .products {
+      grid-template-columns: repeat(auto-fit, minmax(27rem, 40rem));
+      padding: 1rem;
+      column-gap: 1rem;
+    }
+  }
+}

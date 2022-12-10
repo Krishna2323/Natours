@@ -1,0 +1,26 @@
+#map {
+  margin-top: -32rem;
+  padding-top: 14rem;
+
+  height: 100vh;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative;
+  z-index: 10;
+
+  & button {
+    background: none;
+    border: none;
+    .map-pin {
+      height: 4rem;
+      width: 4rem;
+      fill: var(--color-secondary);
+    }
+  }
+
+  & .popup {
+    color: #555;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+}

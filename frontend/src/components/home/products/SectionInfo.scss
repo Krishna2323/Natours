@@ -1,0 +1,146 @@
+.section-info {
+  grid-column: 1/-1;
+  min-height: 80rem;
+  margin-top: -10rem;
+  width: 100%;
+  background-color: #f1f3f5;
+
+  background-blend-mode: screen;
+
+  transform: skewY(-6deg);
+  padding: 10rem 10rem 15rem 10rem;
+  position: relative;
+  z-index: 2;
+
+  &__container {
+    transform: skewY(6deg);
+  }
+
+  @media (max-width: 75em) {
+    padding: 10rem 8rem 50rem 8rem;
+  }
+  @media (max-width: 37.25em) {
+    padding: 10rem 2rem 50rem 2rem;
+  }
+}
+
+.info {
+  text-align: start;
+  display: flex;
+  align-items: center;
+
+  margin-top: 7rem;
+
+  &-details {
+    padding: 6rem 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+    flex: 0 0 60%;
+  }
+
+  &-image-box {
+    padding: 12rem 0rem;
+
+    position: relative;
+    width: 100%;
+
+    & img {
+      width: 65%;
+      display: inline-block;
+      position: absolute;
+      transition: all 0.2s;
+      border-radius: 11px;
+      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.3);
+
+      &:hover {
+        transform: scale(1.1);
+        z-index: 3;
+        outline: 1rem solid #7dd56f;
+        outline-offset: 2rem;
+        box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    & .img-1 {
+      top: -2rem;
+    }
+    & .img-2 {
+      top: 1rem;
+      left: 40%;
+    }
+    & .img-3 {
+      top: 10rem;
+      left: 10%;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    align-items: center;
+
+    &-details {
+      padding: 1rem 0rem;
+      margin-bottom: 5rem;
+    }
+
+    &-image-box {
+      width: 100%;
+      padding: 4rem 4rem;
+
+      & img {
+        width: 40%;
+      }
+
+      & .img-1 {
+        top: -2%;
+        left: 15%;
+      }
+      & .img-2 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
+      & .img-3 {
+        top: -2%;
+        left: 50%;
+        z-index: 0;
+      }
+    }
+  }
+
+  @media (max-width: 37.25em) {
+    flex-direction: column;
+    align-items: center;
+
+    &-details {
+      padding: 1rem 0rem;
+      margin-bottom: 5rem;
+    }
+
+    &-image-box {
+      width: 100%;
+      padding: 4rem 4rem;
+
+      & img {
+        width: 50%;
+      }
+
+      & .img-1 {
+        top: 50%;
+        left: 5%;
+      }
+      & .img-2 {
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
+      & .img-3 {
+        top: 50%;
+        left: 50%;
+        z-index: 0;
+      }
+    }
+  }
+}

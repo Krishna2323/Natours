@@ -1,0 +1,72 @@
+.user-account__sidebar {
+  grid-column: 1 / 2;
+  background-image: var(--background-img);
+  min-height: 80vh;
+  align-self: stretch;
+
+  &-links {
+    list-style: none;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+    width: 100%;
+    padding: 0 2rem;
+
+    &__item {
+      width: 100%;
+      display: flex;
+      padding: 0.5rem 0rem;
+      border-left: 5px solid transparent;
+      position: relative;
+
+      &::after {
+        width: 6px;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background-color: white;
+        height: 0%;
+        border-radius: 11px;
+        transition: all 0.3s;
+        transform-origin: 50%;
+        // margin-right: 1rem;
+      }
+
+      &--active,
+      &:hover {
+        &::after {
+          width: 5px;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: white;
+          height: 100%;
+          border-radius: 11px;
+        }
+      }
+    }
+
+    &__link {
+      text-decoration: none;
+      color: white;
+      font-size: 2.4rem;
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      gap: 1rem;
+      margin-left: 2rem;
+    }
+  }
+
+  @media (max-width: 75em) {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 30%;
+    height: 100%;
+  }
+}

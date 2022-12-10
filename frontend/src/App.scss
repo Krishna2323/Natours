@@ -1,0 +1,241 @@
+html {
+  font-size: 62.5%;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+
+  @media (max-width: 93.75em) {
+    font-size: 56.25%;
+  }
+
+  @media (max-width: 75em) {
+    font-size: 50%;
+  }
+  @media (max-width: 56.25em) {
+    font-size: 43.75%;
+  }
+
+  @media (max-width: 37.5em) {
+    font-size: 37.5%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  // &:focus {
+  //   outline: 1px solid var(--color-primary);
+  //   border-radius: 11px;
+  //   outline-offset: 2px;
+  // }
+}
+
+body {
+  padding: 3rem;
+  background-image: linear-gradient(to right bottom, #0b7285, #38d9a9);
+  // background: linear-gradient(130deg,rgb(71, 126, 150) 0%, rgb(0, 179, 159) 35%, rgb(60, 73, 79) 100%);
+  font-size: 1.6rem;
+  color: #333;
+  position: relative;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+
+  @media (max-width: 75em) {
+    padding: 0;
+  }
+}
+
+:root {
+  --color-primary: #38d9a9;
+  --color-secondary: #0b7285;
+  --color-grey-light: #f1f3f5;
+  --section-rotate: 9vw;
+  --background-img: linear-gradient(to right bottom, #0b7285, #38d9a9);
+}
+
+// //////////////////////////////////////////////////////////////////////////////////
+.mb-medium {
+  margin-bottom: 2rem;
+}
+.mb-large {
+  margin-bottom: 8rem;
+}
+
+.mb-big {
+  margin-bottom: 5rem;
+}
+
+.mt-small-1 {
+  margin-top: 1rem;
+}
+.mt-small {
+  margin-top: 3rem;
+}
+
+// ///////////////////////////////////////////////////
+.text-image {
+  background-image: var(--background-img);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.heading-primary {
+  font-size: 4.2rem;
+  background-image: var(--background-img);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 400;
+  transition: all 0.3s;
+  display: inline-block;
+  background-size: cover;
+  display: inline-block;
+  // width: fit-content;
+  line-height: 1.1;
+  position: relative;
+  z-index: 5;
+  // text-decoration: none !important;
+
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    height: 5%;
+    width: 0px;
+    background:var(--background-img);
+    transform: scaleY(1) translateY(100%);
+    transition: transform 0.6s, width cubic-bezier(1, 0, 0, 1) 0.4s, background-image 0.1s;
+}
+
+
+
+  &:hover {
+    // transform: skewY(2deg) scale(1) skewX(15deg);
+    // background-image: var(--background-img);
+    // color: white;
+    // -webkit-background-clip: unset;
+    // text-decoration: dotted ;
+    &::after{
+      width: 100%;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  background-image: var(--background-img);
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  position: relative;
+  z-index: 5;
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  color: #666;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.heading-4 {
+  background-image: var(--background-img);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 3rem;
+  font-weight: 500;
+}
+.paragraph {
+  font-size: 1.8rem;
+  color: #777;
+  font-weight: 400;
+}
+
+// ////////////////////
+.btn-primary {
+  font-size: 2.4rem;
+
+  background-image: var(--background-img);
+  padding: 0.3rem 4rem;
+  color: white;
+  display: block;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 120px;
+  border: none;
+  position: relative;
+  z-index: 5;
+  width: fit-content !important;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: var(--background-img);
+    border-radius: 200px;
+    transition: all 0.5s;
+  }
+
+  &:hover::after {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 1.2rem 0rem;
+  border: none;
+  background-color: transparent;
+  font-size: 3rem;
+  background-image: var(--background-img);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.form-btn {
+  width: 35%;
+  border: none;
+  background-image: var(--background-img);
+  padding: 0.7rem 0rem;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 3.2rem;
+  color: white;
+  border-radius: 19px;
+  font-weight: 400;
+  cursor: pointer;
+  justify-self: flex-end;
+  align-self: flex-start;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.color-light {
+  color: white;
+}
+
+///////////////////////COLOURS
+
+.color-white {
+  color: white !important;
+}
+
+a{
+  text-decoration: none;
+}

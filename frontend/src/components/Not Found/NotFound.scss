@@ -1,0 +1,72 @@
+.not-found {
+  grid-column: 1/-1;
+  height: 80vh;
+  background-image: var(--background-img);
+  color: rgb(255, 255, 255);
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  & p {
+    display: block;
+  }
+
+  & button {
+    font-size: 4rem;
+    background-image: var(--background-img);
+    text-decoration: none;
+    color: white;
+    padding: 1rem 8rem;
+    border-radius: 40px;
+    display: inline-block;
+    margin-bottom: 15rem;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.loading {
+  grid-column: 1/-1;
+  // height: 40vh;
+  padding: 5rem;
+  background-image: var(--background-img);
+  color: transparent;
+  background-clip: text;
+  font-size: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  & .success {
+    display: block;
+    opacity: 1;
+
+    animation: inilsis 1s infinite ease-in;
+    color: #28b487;
+  }
+
+  & .error {
+    display: block;
+    opacity: 1;
+
+    animation: inilsis 1s infinite ease-in;
+    color: #ff0f0f;
+  }
+}
+
+@keyframes inilsis {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

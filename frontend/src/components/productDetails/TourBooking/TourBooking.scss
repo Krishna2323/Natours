@@ -1,0 +1,63 @@
+.tour-booking {
+  background-color: whitesmoke;
+  padding: 2rem;
+
+  &__div-1 {
+    display: flex;
+    justify-content: center;
+    & button {
+      cursor: pointer;
+    }
+  }
+
+  &__modal {
+    position: fixed;
+    background-image: linear-gradient(to right bottom, #0b7285, #38d9a9);
+    z-index: 20000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5rem 10rem;
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    & span {
+      color: white;
+    }
+    &-form {
+      // display: flex;
+      // flex-direction: column;
+      gap: 2rem;
+      justify-content: center;
+      font-family: inherit;
+
+      &__row {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        & label {
+          color: white;
+          font-size: 2.2rem;
+          margin-left: 0.3rem;
+        }
+
+        & input {
+          padding: 0.5rem 1rem;
+          border: 2px solid white;
+          border-radius: 7px;
+          font-size: 2.8rem;
+
+          &:focus {
+            border: none;
+            outline: none;
+          }
+        }
+      }
+    }
+    &__submit-btn {
+      margin-top: 4rem;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.container {
+  background-color: rgb(255, 255, 255);
+  padding: 0;
+
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.5);
+  display: grid;
+  grid-template-columns: [full-start] 1fr [side-end center-start] 12fr [center-end end-start] 1fr [full-end];
+}
+
+@media (max-width: 1200px) {
+    .container{
+      border-radius: 0px;
+    }
+}
