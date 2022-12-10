@@ -2,7 +2,7 @@ import React from "react";
 import Map from "react-map-gl";
 import icons from "../../assests/icons.svg";
 import "./TourMap.scss";
-import { Marker, Popup } from "react-map-gl";
+import * as MapBoxGLCompo from "react-map-gl";
 const TourMap = (props) => {
   const { product: tour } = props;
 
@@ -19,7 +19,7 @@ const TourMap = (props) => {
         mapboxAccessToken="pk.eyJ1Ijoia3Jpc2huYXdlYjA3IiwiYSI6ImNrem5lbHZ1MjAzNDIycHFtM2RkcTloaW8ifQ.fQmj8WRhUFMFGydGFpy3xA"
       >
         {tour.locations.map((el) => (
-          <Marker
+          <MapBoxGLCompo.Marker
             key={el.description}
             latitude={el.coordinates[1]}
             longitude={el.coordinates[0]}
@@ -29,17 +29,17 @@ const TourMap = (props) => {
                 <use xlinkHref={`${icons}/#icon-map-pin`} />
               </svg>
             </button>
-          </Marker>
+          </MapBoxGLCompo.Marker>
         ))}
         {tour.locations.map((el) => (
-          <Popup
+          <MapBoxGLCompo.Popup
             key={el.description}
             offset={30}
             latitude={el.coordinates[1]}
             longitude={el.coordinates[0]}
           >
             <h4 className="popup">{`${el.description}`}</h4>
-          </Popup>
+          </MapBoxGLCompo.Popup>
         ))}
       </Map>
     </div>
