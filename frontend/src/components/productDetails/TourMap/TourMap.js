@@ -2,7 +2,6 @@ import React from "react";
 import Map from "react-map-gl";
 import icons from "../../assests/icons.svg";
 import "./TourMap.scss";
-import "mapbox-gl/dist/mapbox-gl.css";
 import { Marker, Popup } from "react-map-gl";
 const TourMap = (props) => {
   const { product: tour } = props;
